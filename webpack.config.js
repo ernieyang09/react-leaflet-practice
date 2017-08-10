@@ -25,6 +25,16 @@ module.exports = {
       }, {
         test: /\.html$/,
         loader: "raw-loader" // loaders: ['raw-loader']，這個方式也是可以被接受的。
+      },
+      {
+        test: /\.scss$/,
+        use: [{
+            loader: "style-loader" // creates style nodes from JS strings
+        }, {
+            loader: "css-loader" // translates CSS into CommonJS
+        }, {
+            loader: "sass-loader" // compiles Sass to CSS
+        }]
       }
     ]
   },
